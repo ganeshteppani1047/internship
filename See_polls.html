@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Polls
+    </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/AdminLTE.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="dist/css/skins/_all-skins.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- iCheck -->
+
+    <!-- Morris chart -->
+    <link rel="stylesheet" href="plugins/morris/morris.css">
+    <!-- jvectormap -->
+  
+    <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/container.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/duplicate2.css">
+    <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body onload="Display('');" class="hold-transition skin-blue sidebar-mini bg-c">
+    <form method="post" action="" id="form1" enctype="multipart/form-data">
+      <div>
+     
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="#" class="logo" style="background-color:#067162;">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>C</b></span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>Company</b>Name</span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class=" navbar" style="background-color:#067162;">
+            <!-- Sidebar toggle button-->
+            </nav>
+        </header>
+        <div class="row" style="padding-top: 50px;">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+            	<center>
+            	<h3>Polls</h3>
+            	<p>2 lines for dummy</p>
+            	<p>testing testing</p>
+            </center>
+                   <div class="box box-info">
+                              <div class="box box-body">
+                                <center><h3>Heading</h3>
+                                  <p>dummy lines</p>
+                                </center>
+                            <div class="box special">
+                            
+                                  <div class="row">
+                                  <div class="col-md-6 vl">
+                               
+                               
+
+                                   <div class="col-md-6">                     
+                                            <label>Title:</label>
+                                           <b><p id="title12" style="width: 260px; height: 30px;">fdsabab</p></b>
+                                      </div>
+                                      <div class="col-md-6"></div>
+                                          <div class="col-xs-12 col-sm-12 col-md-12">
+                                                <label for="Body_part">Body:</label>
+                                                <div>
+                                                <textarea rows="7" cols="20" id="body_part" class="form-control">vdsf  dsghb h h vhdf vhjdhv dfjh vjhdf h vdh vjhddf vhdfa vh dfahf vahdvjhdahvjdahj hj hja ah vjhadvjha djhv dahj jh jha vjha dhjv hja hja vjh ahbvha vh vh  vhja vhj davjh ah vhad hv adh vjhad vh dahv ha hv dhjav hav hfa vhda vhf dlh vhfdbvjhdfbj  hbvhjdfv  hdavhdf hajvjd va jadvbdjvb</textarea>
+                                          </div>
+                                        </div>
+                                         <div class="col-md-5">
+                                    <label>Start date</label>
+                                    <input type="date" id="sdate" disabled>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <label>End date</label>
+                                    <input type="date" id="edate" disabled>
+                                  </div>
+                                  </div>        
+                                    <div class="col-md-6">
+                                              
+            
+            
+            <div class="box-body" style="height: 250px;">
+               <div class="box-tools pull-right">
+                                                <a href="#"> 
+                                                 <span class="glyphicon glyphicon-edit"></span>
+                                                     </a>
+                                                  <a href="#">
+                                                   <span class="glyphicon glyphicon-trash"></span>
+                                                 </a>
+                                                  <a href="#">
+                                                   <span class="glyphicon glyphicon-level-up"></span>
+                                                     </a>
+              </div>
+              
+              <div class="top_small" id="piechart"></div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['Work', 8],
+  ['Eat', 2],
+  ['TV', 4],
+  ['Gym', 2],
+  ['Sleep', 8]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = { 'width':360, 'height':300};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data);
+}
+</script>
+</div>
+ <div class="col-md-12">
+  <b>  Remaining days: </b><span id="days"> 23</span>
+ </div>   
+</div>   
+<div class="col-md-12"></div>
+ 
+                                </div>
+</div>
+</div>
+</div>  
+        <!-- /.col (LEFT) -->
+        <div class="container-table100">
+                                <div class="wrap-table100">
+                                  <div class="table100 ver3 m-b-110">
+                                    <div class="table100-head js-pscroll">
+                                      <table>
+                                        <thead >
+                                          <tr class="row100 head">
+                                            <th class="cell100 column12">Sl.No.</th>
+                                            <th class="cell100 column2"><center>Main Subject</center></th>
+                                            <th class="cell100 column3"><center>Sub Topic1</center></th>
+                                            <th class="cell100 column4"><center>Sub Topic2</center></th>
+                                          
+                                          </tr>
+                                        </thead>
+                                      </table>
+                                    </div>
+
+                                    <div class="table100-body js-pscroll table-bordered">
+                                      <table class="table">
+                                        <tbody >
+                                          <tr class="row100 body">
+                                            <td class="cell100 column1">1</td>
+                                            <td class="cell100 column2">Boxing</td>
+                                            <td class="cell100 column3">9:00 AM - 11:00 AM</td>
+                                            <td class="cell100 column4">Aaron Chapman</td>
+                                           </tr>
+
+                                          <tr class="row100 body">
+                                            <td class="cell100 column1">2</td>
+                                            <td class="cell100 column2">Yoga</td>
+                                            <td class="cell100 column3">8:00 AM - 9:00 AM</td>
+                                            <td class="cell100 column4">Adam Stewart</td>
+                                            </tr>
+
+                                          <tr class="row100 body">
+                                            <td class="cell100 column1">3</td>
+                                            <td class="cell100 column2">Gym</td>
+                                            <td class="cell100 column3">9:00 AM - 10:00 AM</td>
+                                            <td class="cell100 column4">Aaron Chapman</td>
+                                            </tr>
+
+                                          <tr class="row100 body">
+                                            <td class="cell100 column1">4</td>
+                                            <td class="cell100 column2">Yoga</td>
+                                            <td class="cell100 column3">7:00 AM - 8:30 AM</td>
+                                            <td class="cell100 column4">Donna Wilson</td>
+                                            </tr>
+
+                                          <tr class="row100 body">
+                                            <td class="cell100 column1">5</td>
+                                            <td class="cell100 column2">Yoga</td>
+                                            <td class="cell100 column3">8:00 AM - 9:00 AM</td>
+                                            <td class="cell100 column4">Donna Wilson</td>
+                                            </tr>
+
+                                          <tr class="row100 body">
+                                            <td class="cell100 column1">6</td>
+                                            <td class="cell100 column2">Dance</td>
+                                            <td class="cell100 column3">5:00 PM - 7:00 PM</td>
+                                            <td class="cell100 column4">Donna Wilson</td>
+                                           </tr>
+
+                                          <tr class="row100 body">
+                                            <td class="cell100 column1">68</td>
+                                            <td class="cell100 column2">Gym</td>
+                                            <td class="cell100 column3">5:00 PM - 7:00 PM</td>
+                                            <td class="cell100 column4">Randy Porter</td>
+                                            </tr>
+
+                                          <tr class="row100 body">
+                                            <td class="cell100 column1">59</td>
+                                            <td class="cell100 column2">Gym</td>
+                                            <td class="cell100 column3">8:00 AM - 9:00 AM</td>
+                                            <td class="cell100 column4">Randy Porter</td>
+                                            </tr>
+                                          
+                                          <tr class="row100 body">
+                                            <td class="cell100 column1">1</td>
+                                            <td class="cell100 column2">Boxing</td>
+                                            <td class="cell100 column3">9:00 AM - 11:00 AM</td>
+                                            <td class="cell100 column4">Aaron Chapman</td>
+                                            </tr>
+
+                                          <tr class="row100 body">
+                                            <td class="cell100 column1">2</td>
+                                            <td class="cell100 column2">Yoga</td>
+                                            <td class="cell100 column3">8:00 AM - 9:00 AM</td>
+                                            <td class="cell100 column4">Adam Stewart</td>
+                                            </tr>
+
+                                          <tr class="row100 body">
+                                            <td class="cell100 column1">3</td>
+                                            <td class="cell100 column2">Gym</td>
+                                            <td class="cell100 column3">9:00 AM - 10:00 AM</td>
+                                            <td class="cell100 column4">Aaron Chapman</td>
+                                            </tr>
+
+                                          <tr class="row100 body">
+                                            <td class="cell100 column1">4</td>
+                                            <td class="cell100 column2">Yoga</td>
+                                            <td class="cell100 column3">7:00 AM - 8:30 AM</td>
+                                            <td class="cell100 column4">Donna Wilson</td>
+                                            </tr>
+
+                                          <tr class="row100 body">
+                                            <td class="cell100 column1">5</td>
+                                            <td class="cell100 column2">Yoga</td>
+                                            <td class="cell100 column3">8:00 AM - 9:00 AM</td>
+                                            <td class="cell100 column4">Donna Wilson</td>
+                                            </tr>
+
+                                          <tr class="row100 body">
+                                            <td class="cell100 column1">6</td>
+                                            <td class="cell100 column2">Dance</td>
+                                            <td class="cell100 column3">5:00 PM - 7:00 PM</td>
+                                            <td class="cell100 column4">Donna Wilson</td>
+                                            </tr>
+
+                                          <tr class="row100 body">
+                                            <td class="cell100 column1">68</td>
+                                            <td class="cell100 column2">Gym</td>
+                                            <td class="cell100 column3">5:00 PM - 7:00 PM</td>
+                                            <td class="cell100 column4">Randy Porter</td>
+                                            </tr>
+
+                                          <tr class="row100 body">
+                                            <td class="cell100 column1">59</td>
+                                            <td class="cell100 column2">Gym</td>
+                                            <td class="cell100 column3">8:00 AM - 9:00 AM</td>
+                                            <td class="cell100 column4">Randy Porter</td>
+                                            </tr>  
+                     
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div> 
+        <div class="col-md-6">
+          <!-- LINE CHART -->
+         
+          <!-- /.box -->
+
+          <!-- BAR CHART -->
+         
+          <!-- /.box -->
+
+        </div>
+        <!-- /.col (RIGHT) -->
+      </div>
+      <!-- /.row -->
+
+    
+            </div>
+            </div>
+            </div>
+             <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+        </div>
+        <strong>Copyright &copy; 2017 <a href="#">Company</a>.</strong>
+        All rights reserved. 
+      </footer>
+        </form>
+        <!-- jQuery 2.2.3 -->
+<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- ChartJS 1.0.1 -->
+<script src="../../plugins/chartjs/Chart.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<!-- page script -->
+        <script>
+  $(function () {
+    //-------------
+    //- PIE CHART -
+    //-------------
+    // Get context with jQuery - using jQuery's .get() method.
+    var pieChartCanvas = $("#pieChart").get(0).getContext("2d");
+    var pieChart = new Chart(pieChartCanvas);
+    var PieData = [
+      {
+        value: 700,
+        color: "#f56954",
+        highlight: "#f56954",
+        label: "Chrome"
+      },
+      {
+        value: 500,
+        color: "#00a65a",
+        highlight: "#00a65a",
+        label: "IE"
+      },
+      {
+        value: 400,
+        color: "#f39c12",
+        highlight: "#f39c12",
+        label: "FireFox"
+      },
+      {
+        value: 600,
+        color: "#00c0ef",
+        highlight: "#00c0ef",
+        label: "Safari"
+      },
+      {
+        value: 300,
+        color: "#3c8dbc",
+        highlight: "#3c8dbc",
+        label: "Opera"
+      },
+      {
+        value: 100,
+        color: "#d2d6de",
+        highlight: "#d2d6de",
+        label: "Navigator"
+      }
+    ];
+    var pieOptions = {
+      //Boolean - Whether we should show a stroke on each segment
+      segmentShowStroke: true,
+      //String - The colour of each segment stroke
+      segmentStrokeColor: "#fff",
+      //Number - The width of each segment stroke
+      segmentStrokeWidth: 2,
+      //Number - The percentage of the chart that we cut out of the middle
+      percentageInnerCutout: 50, // This is 0 for Pie charts
+      //Number - Amount of animation steps
+      animationSteps: 100,
+      //String - Animation easing effect
+      animationEasing: "easeOutBounce",
+      //Boolean - Whether we animate the rotation of the Doughnut
+      animateRotate: true,
+      //Boolean - Whether we animate scaling the Doughnut from the centre
+      animateScale: false,
+      //Boolean - whether to make the chart responsive to window resizing
+      responsive: true,
+      // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
+      maintainAspectRatio: true,
+      //String - A legend template
+      legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
+    };
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    pieChart.Doughnut(PieData, pieOptions);
+
+    //-------------
+    //- BAR CHART -
+    //-------------
+    var barChartCanvas = $("#barChart").get(0).getContext("2d");
+    var barChart = new Chart(barChartCanvas);
+    var barChartData = areaChartData;
+    barChartData.datasets[1].fillColor = "#00a65a";
+    barChartData.datasets[1].strokeColor = "#00a65a";
+    barChartData.datasets[1].pointColor = "#00a65a";
+    var barChartOptions = {
+      //Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
+      scaleBeginAtZero: true,
+      //Boolean - Whether grid lines are shown across the chart
+      scaleShowGridLines: true,
+      //String - Colour of the grid lines
+      scaleGridLineColor: "rgba(0,0,0,.05)",
+      //Number - Width of the grid lines
+      scaleGridLineWidth: 1,
+      //Boolean - Whether to show horizontal lines (except X axis)
+      scaleShowHorizontalLines: true,
+      //Boolean - Whether to show vertical lines (except Y axis)
+      scaleShowVerticalLines: true,
+      //Boolean - If there is a stroke on each bar
+      barShowStroke: true,
+      //Number - Pixel width of the bar stroke
+      barStrokeWidth: 2,
+      //Number - Spacing between each of the X value sets
+      barValueSpacing: 5,
+      //Number - Spacing between data sets within X values
+      barDatasetSpacing: 1,
+      //String - A legend template
+      legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].fillColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>",
+      //Boolean - whether to make the chart responsive
+      responsive: true,
+      maintainAspectRatio: true
+    };
+
+    barChartOptions.datasetFill = false;
+    barChart.Bar(barChartData, barChartOptions);
+  });
+</script>
+        </body>
+        </html>   
+
+

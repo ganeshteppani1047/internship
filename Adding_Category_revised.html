@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -14,107 +14,83 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/AdminLTE.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.css">
+  <!-- iCheck -->
 
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="plugins/morris/morris.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
 
  <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
  <!--===============================================================================================-->
  <link rel="stylesheet" type="text/css" href="css/util.css">
  <link rel="stylesheet" type="text/css" href="css/main.css">
- <link rel="stylesheet" type="text/css" href="dist/css/container.css">
- <link rel="stylesheet" type="text/css" href="dist/css/duplicate2.css">
- 
  <!--===============================================================================================-->
 </head>
-<body class="hold-transition bg-c">
-  <form method="post" action="./Adding_category.html" id="form1">
-     <div class="wrapper">
-      <header class="main-header">
-    <!-- Logo -->
-    <a href="#" class="logo logo-c">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>C</b>
-      </span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg white"><b>Company</b>Name
-      </span>
-    </a>
-    <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top">
+<body class="hold-transition skin-blue bg-c">
+   <form role="form">
+    <div>
+     <header class="main-header">
+    
+      <!-- Logo -->
+      <a href="#" class="logo logo-c ">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b>C</b>
+        </span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg white"><b>Company</b>Name
+        </span>
+      </a>
+    
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-          <!-- Messages: style can be found in dropdown.less-->
-          <li class="">
-            <a href="login.aspx" class="white">Logout
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-      <!-- Content Wrapper. Contains page content -->
-      <div>
-       <!-- Content Header (Page header) -->
-       <section class="content-header">
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <!-- Messages: style can be found in dropdown.less-->
+            <li class="">
+              <a href="login.aspx">Logout
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+     <!-- Content Wrapper. Contains page content -->
+   
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
         <h1>
           You are viewing on
-          <small> Mobile Preview</small>
+          <small> mobil Preview</small>
         </h1>
-       </section>
-       <section class="content">
-          <div class="row">
-            <div class="container">
-                            <div class="row bs-wizard" style="border-bottom:0;">
-                                <div class="col-xs-3 bs-wizard-step complete" >
-                                <div class="text-center bs-wizard-stepnum"><br></div>
-                  <div class="progress"  ><div class="progress-bar" ></div></div>
-                  <a href="#" class="bs-wizard-dot"  ></a>
-                  <div class="text-center bs-wizard-stepnum"> Step 1</div>
-                 
-                </div>
-                
-                <div class="col-xs-3 bs-wizard-step complete"><!-- complete -->
-                  <div class="text-center bs-wizard-stepnum"><br></div>
-                  <div class="progress" style = "background : #f6f6f6"><div class="progress-bar" style="width: 50%"  ></div></div>
-                  <a href="#" class="bs-wizard-dot" ></a>
-                  <div class="text-center bs-wizard-stepnum"><span style="background-color: #1b62cef5; padding: 4px; border-radius: 5px; color: white;">Step 2</span></div>
-                  
-                </div>
-                
-                <div class="col-xs-3 bs-wizard-step"><!-- complete -->
-                  <div class="text-center bs-wizard-stepnum"><br></div>
-                  <div class="progress" ><div class="progress-bar" ></div></div>
-                  <a href="#" class="bs-wizard-dot"  ></a>
-                  <div class="text-center bs-wizard-stepnum">Step 3</div>
-                  
-                </div>
-                
-                <div class="col-xs-3 bs-wizard-step disabled" ><!-- active -->
-                  <div class="text-center bs-wizard-stepnum"><br></div>
-                  <div class="progress" ><div class="progress-bar" ></div></div>
-                  <a href="#" class="bs-wizard-dot" ></a>
-                  
-                  <div class="text-center bs-wizard-stepnum">Step 4</div>
-                  
-                </div>
+      </section>
+    
+      <!-- Main content -->
+      <section>
+        <div class="row">
+          <!-- left column -->
+        
+            
+            <div class="col-md-2">
             </div>
-        </div>
-            <!-- left column -->
-            <div class="row top">
-              <div class="col-md-2">
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-8">
-                <div class="box box-new">
+            
+            <div class="col-xs-12 col-sm-12 col-md-8 top">
+
+              <div class="box box-new">
                   <!--<form role="form">-->
                   <div class="box-body" id="Category">
                    
-                      <div style="display: block;">
-                      <div class="col-xs-12 col-sm-12 col-md-4">
-                        <h3><center>Create Main Category</center></h3><hr>
+                      <div class="col-xs-6 col-sm-12 col-md-4 top">
+                        <div><h3><center>Create Main Category</center></h3><hr>
                         Category Name
-                        <input name="txtCategory" type="text" id="txtCategory" class="form-control" onchange="MainCategoryAvailability()" onkeypress="return blockSpecialChars(event)"><br />
+                        <input name="txtCategory" type="text" id="txtCategory" class="form-control"><br />
                         <input type="submit" name="btnCreate" value="Create" onclick="return Category();" id="btnCreate" class="btn btn-info pull-right" />
                         <br />
+                      </div>
                         <div class="first">
                           <div class="container-table100">
                             <div class="wrap-table100">
@@ -227,12 +203,14 @@
                         </div>
                       </div>
                     
-                      <div class="col-xs-12 col-sm-12 col-md-4">
-                        <h3><center>Create Sub Category 1</center></h3><hr>
-                         Category Name<input name="txtCategory1" type="text" id="txtCategory1" class="form-control" onchange="SubCategory1Availability()" onkeypress="return blockSpecialChars(event)" />
-                         <span id="lblSubCategory1"></span><br />
-                          <input type="submit" name="btnCreate1" value="Create" onclick="return SubCategory();" id="btnCreate1" class="btn btn-info pull-right" />
-                          <div class="second">
+                       <div class="col-xs-6 col-sm-12 col-md-4 top">
+                        <div><h3><center>Create Main Category</center></h3><hr>
+                        Category Name
+                        <input name="txtCategory" type="text" id="txtCategory" class="form-control" onchange="MainCategoryAvailability()" onkeypress="return blockSpecialChars(event)"><br />
+                        <input type="submit" name="btnCreate" value="Create" onclick="return Category();" id="btnCreate" class="btn btn-info pull-right" />
+                        <br />
+                      </div>
+                        <div class="first">
                           <div class="container-table100">
                             <div class="wrap-table100">
                               <div class="table100 ver3 m-b-110">
@@ -342,16 +320,17 @@
                             </div>
                           </div>
                         </div>
-                      </div>           
-                    
-                      <div class="col-xs-12 col-sm-12 col-md-4 ">
-                        <h3><center>Create Sub Category 1</center></h3><hr>
+                      </div>
+
+                       <div class="col-xs-6 col-sm-12 col-md-4 top">
+                        <div><h3><center>Create Main Category</center></h3><hr>
                         Category Name
-                        <input name="txtCategory1" type="text" id="txtCategory1" class="form-control" onchange="SubCategory1Availability()" onkeypress="return blockSpecialChars(event)" />
-                        <span id="lblSubCategory1"></span><br />
-                        <input type="submit" name="btnCreate1" value="Create" onclick="return SubCategory();" id="btnCreate1" class="btn btn-info pull-right" />
-                          <div class="second">
-                            <div class="container-table100">
+                        <input name="txtCategory" type="text" id="txtCategory" class="form-control" onchange="MainCategoryAvailability()" onkeypress="return blockSpecialChars(event)"><br />
+                        <input type="submit" name="btnCreate" value="Create" onclick="return Category();" id="btnCreate" class="btn btn-info pull-right" />
+                        <br />
+                      </div>
+                        <div class="first">
+                          <div class="container-table100">
                             <div class="wrap-table100">
                               <div class="table100 ver3 m-b-110">
                                 <div class="table100-head">
@@ -460,54 +439,54 @@
                             </div>
                           </div>
                         </div>
-                    </div>
-                                 
-                        
-                    </div>
-                  </div>
+                      </div> 
+                   </div>
+                 </div>
                 </div>
+                <div class="col-md-2">
+                </div>
+               </div>
              
-     <div class="button_align">
-        <div class="box box-new next_modal">
-            <!--<form role="form">--> 
-            <div class="box-body">
-            <input type="submit" name="btnNext" value="Back" id="btnNext" class="btn btn-primary pull-left" />
-            <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal">Next</button>
-            <!-- Modal -->
-              <div id="myModal" class="modal fade" role="dialog">
-                <div class="modal-dialog">
-
-                  <!-- Modal content-->
-                  <div class="modal-content">
-                    <div class="modal-body next_modal">
-                      <p>Please enter the required details?</p>
-                      <input type="submit" name="btnNext" value="Yes" id="btnNext" class="btn btn-primary pull-left" />
-                      <input type="submit" name="btnNext" value="Skip" id="btnNext" class="btn btn-primary pull-right" />
+            </section> 
+               <div class="row">
+                <div class="col-xs-2 col-sm-2 col-md-2">
+                </div>
+                <div class="col-md-8 col-xs-8 col-sm-8">
+                 <div class="button_align">
+                  <div class="box box-new next_modal">
+                    <!--<form role="form">--> 
+                    <div class="box-body">
+                     <input type="submit" name="btnNext" value="Back" id="btnNext" class="btn btn-primary pull-left" />
+                      <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal">Next</button>
+                       <!-- Modal -->
+                        <div id="myModal" class="modal fade" role="dialog">
+                         <div class="modal-dialog">
+                          <!-- Modal content-->
+                           <div class="modal-content">
+                            <div class="modal-body next_modal">
+                              <p>Please enter the required details?</p>
+                              <input type="submit" name="btnNext" value="Yes" id="btnNext" class="btn btn-primary pull-left" />
+                              <input type="submit" name="btnNext" value="Skip" id="btnNext" class="btn btn-primary pull-right" />
+                            </div>
+                           </div>
+                        </div>
+                      </div> 
                     </div>
                   </div>
-
-                </div>
-              </div> 
+                </div>   
+              </div>
+              <div class="col-md-2">
+              </div>
             </div>
-          </div>
-        </div>
-       </div>
-        <div class="col-md-2"></div>
-      </div>
-    </div>
-  </section>
-      <!-- /.content-wrapper -->
-      <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-        </div>
-        <strong>Copyright &copy; 2017 <a href="#">Company</a>.</strong>
-        All rights reserved. 
-      </footer>
-
-            <!-- Add the sidebar's background. This div must be placed
-       immediately after the control sidebar -->
-        <!-- ./wrapper -->
-
+          
+         <div class="top">
+         <footer class="main-footer">
+                <div class="pull-right hidden-xs">
+                </div>
+                <strong>Copyright &copy; 2017 <a href="#">Company</a>.</strong>
+                All rights reserved.
+             </footer>
+         </div>    
 <!--===============================================================================================-->  
   <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
@@ -528,11 +507,8 @@
       
     
   </script>
-<script type="text/javascript">
-//<![CDATA[
-alert('Record Added Successfully')//]]>
-</script>
-</form>
-</body>
-</html>
-
+<!--===============================================================================================-->
+        </div>
+       </form>
+      </body>
+     </html>     

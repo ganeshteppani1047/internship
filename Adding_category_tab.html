@@ -17,10 +17,12 @@
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
-  <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
-<!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="css/util.css">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+ <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+ <!--===============================================================================================-->
+ <link rel="stylesheet" type="text/css" href="css/util.css">
+ <link rel="stylesheet" type="text/css" href="css/main.css">
+ <!--===============================================================================================-->
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,7 +34,7 @@
 <!-- ADD THE CLASS sidedar-collapse TO HIDE THE SIDEBAR PRIOR TO LOADING THE SITE -->
 <body class="hold-transition skin-blue sidebar-collapse sidebar-mini">
 <!-- Site wrapper -->
-<div>
+<div class="wrapper">
 
   <header class="main-header">
     <!-- Logo -->
@@ -156,7 +158,7 @@
               <li class="user-body">
                 <div class="row">
                   <div class="col-xs-4 text-center">
-                    <a href="#">Updates</a>
+                    <a href="#">Followers</a>
                   </div>
                   <div class="col-xs-4 text-center">
                     <a href="#">Sales</a>
@@ -239,8 +241,8 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-            <li><a href="file:///C:/Users/Syed%20Omer%20Farooq/Downloads/Website2.0/website/sidemenu.html"><i class="fa fa-circle-o"></i> Updates</a></li>
-            <li><a href="file:///C:/Users/Syed%20Omer%20Farooq/Downloads/Website2.0/website/new_page1.html"><i class="fa fa-circle-o"></i>Notice</a></li>
+            <li><a href="boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
+            <li><a href="fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
             <li class="active"><a href="collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a>
             </li>
           </ul>
@@ -396,7 +398,13 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
   
-    
+          
+   <section class="content-header">
+        <h1>
+          You are viewing on
+          <small> Mobile Preview</small>
+        </h1>
+       </section>
        <section class="content">
           <div class="row top">
             <!-- left column -->
@@ -767,12 +775,37 @@
                   </div>
                 </div>
              
-    
+     <div class="button_align">
+        <div class="box box-new next_modal">
+            <!--<form role="form">--> 
+            <div class="box-body">
+            <input type="submit" name="btnNext" value="Back" id="btnNext" class="btn btn-primary pull-left" />
+            <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal">Next</button>
+            <!-- Modal -->
+              <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-body next_modal">
+                      <p>Please enter the required details?</p>
+                      <input type="submit" name="btnNext" value="Yes" id="btnNext" class="btn btn-primary pull-left" />
+                      <input type="submit" name="btnNext" value="Skip" id="btnNext" class="btn btn-primary pull-right" />
+                    </div>
+                  </div>
+
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
        </div>
         <div class="col-md-2"></div>
       </div>
     </div>
-  </section>  
+  </section>
+    
+    <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
 
@@ -992,7 +1025,15 @@
 <script src="dist/js/app.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
-<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<!--===============================================================================================-->  
+  <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+  <script src="vendor/bootstrap/js/popper.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+  <script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+  <script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
   <script>
     $('.js-pscroll').each(function(){
       var ps = new PerfectScrollbar(this);
@@ -1004,8 +1045,10 @@
       
     
   </script>
-<!--===============================================================================================-->
-  <script src="js/main.js"></script>             
+<script type="text/javascript">
+//<![CDATA[
+alert('Record Added Successfully')//]]>
+</script>
 
 </body>
 </html>

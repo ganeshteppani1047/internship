@@ -1,0 +1,505 @@
+  <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 2 | Plan Selection</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.css">
+  <!-- iCheck -->
+
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="plugins/morris/morris.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
+
+<style>
+.pricing {
+  position: relative;
+  margin-bottom: 15px;
+  border: 3px solid #eee;
+  padding: 0 20px;
+}
+
+.pricing-active {
+  border: 3px solid #36d7ac;
+  margin-top: -10px;
+  box-shadow: 7px 7px rgba(54, 215, 172, 0.2);
+}
+
+.pricing:hover {
+  border: 3px solid #36d7ac;
+}
+
+.pricing:hover h4 {
+  color: #36d7ac;
+}
+
+.pricing-head {
+  text-align: center;
+}
+
+.pricing-head h3,
+.pricing-head h4 {
+  margin: 0;
+  line-height: normal;
+}
+
+.pricing-head h3 span,
+.pricing-head h4 span {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.pricing-head h3 {
+  font-weight: 300;
+  color: #fafafa;
+  padding: 12px 0;
+  font-size: 27px;
+  background: #36d7ac;
+  border-bottom: solid 1px #41b91c;
+}
+
+.pricing-head h4 {
+  color: #bac39f;
+  padding: 5px 0;
+  font-size: 54px;
+  font-weight: 300;
+  background: #fbfef2;
+  border-bottom: solid 1px #f5f9e7;
+}
+
+.pricing-head-active h4 {
+  color: #36d7ac;
+}
+
+.pricing-head h4 i {
+  top: -8px;
+  font-size: 28px;
+  font-style: normal;
+  position: relative;
+}
+
+.pricing-head h4 span {
+  top: -10px;
+  font-size: 14px;
+  font-style: normal;
+  position: relative;
+}
+
+/*Pricing Content*/
+.pricing-content li {
+  color: #888;
+  font-size: 12px;
+  padding: 7px 15px;
+  border-bottom: solid 1px #f5f9e7;
+}
+
+/*Pricing Footer*/
+.pricing-footer {
+  color: #777;
+  font-size: 11px;
+  line-height: 17px;
+  text-align: center;
+  padding: 0 20px 19px;
+}
+
+/*Priceing Active*/
+.price-active,
+.pricing:hover {
+  z-index: 9;
+}
+
+.price-active h4 {
+  color: #36d7ac;
+}
+
+.no-space-pricing .pricing:hover {
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.no-space-pricing .price-active .pricing-head h4,
+.no-space-pricing .pricing:hover .pricing-head h4 {
+  color: #36d7ac;
+  padding: 15px 0;
+  font-size: 80px;
+  transition: color 0.5s ease-in-out;
+}
+
+.yellow-crusta.btn {
+  color: #FFFFFF;
+  background-color: #f3c200;
+}
+.yellow-crusta.btn:hover,
+.yellow-crusta.btn:focus,
+.yellow-crusta.btn:active,
+.yellow-crusta.btn.active {
+    color: #FFFFFF;
+    background-color: #cfa500;
+}
+    </style>
+   </head>
+   <body style="background-color: rgb(236, 240, 245);">
+         <form method="post" action="./Planselection.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTE5MTk2MjU4Mg9kFgICAQ9kFgICAw88KwAJAQAPFgQeCERhdGFLZXlzFgAeC18hSXRlbUNvdW50AgRkFghmD2QWAgIBD2QWCgIBDw8WAh4EVGV4dAUERlJFRWRkAgMPDxYCHwIFBGJpIDJkZAIFDw8WAh8CBQVuaWsgM2RkAgcPDxYCHwIFBDAuMDBkZAIJDw8WAh4PQ29tbWFuZEFyZ3VtZW50BQQwLjAwZGQCAQ9kFgICAQ9kFgoCAQ8PFgIfAgUIU3RhbmRhcmRkZAIDDw8WAh8CBQNqIDhkZAIFDw8WAh8CBQRqJiA5ZGQCBw8PFgIfAgUFMTAuMDBkZAIJDw8WAh8DBQUxMC4wMGRkAgIPZBYCAgEPZBYKAgEPDxYCHwIFB1ByZW1pdW1kZAIDDw8WAh8CBQNqIDhkZAIFDw8WAh8CBQRiaiAwZGQCBw8PFgIfAgUFMjAuMDBkZAIJDw8WAh8DBQUyMC4wMGRkAgMPZBYCAgEPZBYKAgEPDxYCHwIFCkN1c3RvbWl6ZWRkZAIDDw8WAh8CBQVqIDkgMGRkAgUPDxYCHwIFBWtubyA5ZGQCBw8PFgIfAgUEMC4wMGRkAgkPDxYEHwMFBDAuMDAeB1Zpc2libGVoZGRke3ruz2mma+Qc8yGDUMeG0jpp1pcTh3aIa63L/Zcg1+0=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+  <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F2DFC580" />
+  <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAATH86sphpkErBjksaUrCbjtA1GkwGNoIztBQHjNhy4cVGVF3wqIm9FVW0z8vmrtma35RMJ33rOySpnUKSD8rab76G0XEbZmG+mtgb4NkwTdEGAw+c35mNfdYg5T+z90pXk=" />
+</div>
+
+     
+
+
+        <div class="wrapper">
+
+            
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="#" class="logo" style="background-color:#067162;">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>C</b></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg" style="color:#ffffff;"><b>Company</b>Name</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top" style="background-color:#067162;">
+      <!-- Sidebar toggle button-->
+
+        <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">
+                            <!-- Messages: style can be found in dropdown.less-->
+                            <li class="">
+                                <a href="login.aspx" style="color: white">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </nav>
+            </header>
+  <!-- Content Wrapper. Contains page content -->
+  <div>
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        You are viewing on
+        <small> mobil Preview</small>
+      </h1>
+      
+    </section>
+    
+
+
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <!-- left column -->
+
+      <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+      <!-- progressbar -->
+
+       
+  
+  
+<div>
+                  <!-- general form elements -->
+          
+            <div class="box-header">
+
+
+              <div class="col-md-2"></div>
+              <div class="col-md-8">  
+
+
+                <ul id="progressbar2">
+    <li class="active"></li>
+    <li class="active"></li>
+    <li class="active"></li>
+    <li class="active"></li>
+  </ul>
+              </div>
+              <div class="col-md-2"></div></div>
+              <br />
+              <div class="row">
+              <div class="col-md-1">
+              </div>
+              <div class="col-md-10">
+              <div class="box box-new" style="border-top-color: #067162; height: auto;">
+              <h2 style="color: black;color: #000; padding: 10px 20px; height: 60px; text-align: center">Plan Selection</h2>
+            
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form">
+              <div class="box-body">
+               <div class="form-group">
+                                 
+<div class="col-md-3">
+      <div class="pricing hover-effect">
+        <div class="pricing-head">
+          <h3>Begginer <span>
+          Officia deserunt mollitia </span>
+          </h3>
+          <h4><i>$</i>5<i>.49</i>
+          <span>
+          Per Month </span>
+          </h4>
+        </div>
+        <ul class="pricing-content list-unstyled">
+          <li>
+            At vero eos
+          </li>
+          <li>
+            No Support
+          </li>
+          <li>
+            Fusce condimentum
+          </li>
+          <li>
+            Ut non libero
+          </li>
+          <li>
+            Consecte adiping elit
+          </li>
+        </ul>
+        <div class="pricing-footer">
+          <p>
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .
+          </p>
+                  <a id="DataList1_LinkButton1_3" class="btn btn-info" href="javascript:__doPostBack(&#39;DataList1$ctl01$LinkButton1&#39;,&#39;&#39;)">Buy now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="pricing hover-effect">
+        <div class="pricing-head">
+          <h3>Pro <span>
+          Officia deserunt mollitia </span>
+          </h3>
+          <h4><i>$</i>8<i>.69</i>
+          <span>
+          Per Month </span>
+          </h4>
+        </div>
+        <ul class="pricing-content list-unstyled">
+          <li>
+            At vero eos
+          </li>
+          <li>
+            No Support
+          </li>
+          <li>
+            Fusce condimentum
+          </li>
+          <li>
+            Ut non libero
+          </li>
+          <li>
+            Consecte adiping elit
+          </li>
+        </ul>
+        <div class="pricing-footer">
+          <p>
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor.
+          </p>
+                  <a id="DataList1_LinkButton1_3" class="btn btn-info" href="javascript:__doPostBack(&#39;DataList1$ctl01$LinkButton1&#39;,&#39;&#39;)">Buy now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="pricing pricing-active hover-effect">
+        <div class="pricing-head pricing-head-active">
+          <h3>Expert <span>
+          Officia deserunt mollitia </span>
+          </h3>
+          <h4><i>$</i>13<i>.99</i>
+          <span>
+          Per Month </span>
+          </h4>
+        </div>
+        <ul class="pricing-content list-unstyled">
+          <li>
+            At vero eos
+          </li>
+          <li>
+            No Support
+          </li>
+          <li>
+            Fusce condimentum
+          </li>
+          <li>
+            Ut non libero
+          </li>
+          <li>
+            Consecte adiping elit
+          </li>
+        </ul>
+        <div class="pricing-footer">
+          <p>
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .
+          </p>
+          <a id="DataList1_LinkButton1_3" class="btn btn-info" href="javascript:__doPostBack(&#39;DataList1$ctl01$LinkButton1&#39;,&#39;&#39;)">Buy now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="pricing hover-effect">
+        <div class="pricing-head">
+          <h3>Hi-Tech <span>
+          Officia deserunt mollitia </span>
+          </h3>
+          <h4><i>$</i>99<i>.00</i>
+          <span>
+          Per Month </span>
+          </h4>
+        </div>
+        <ul class="pricing-content list-unstyled">
+          <li>
+            At vero eos
+          </li>
+          <li>
+            No Support
+          </li>
+          <li>
+            Fusce condimentum
+          </li>
+          <li>
+            Ut non libero
+          </li>
+          <li>
+            Consecte adiping elit
+          </li>
+        </ul>
+        <div class="pricing-footer">
+          <p>
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .
+          </p>
+          <a id="DataList1_LinkButton1_3" class="btn btn-info" href="javascript:__doPostBack(&#39;DataList1$ctl01$LinkButton1&#39;,&#39;&#39;)">Buy now</a>
+        
+        </div>
+      </div>
+    </div>
+              </div>
+              <div class="col-md-1"></div>
+              
+              </div>
+    <!--//End Pricing -->
+    <br><br>
+  </div>
+                                    
+                                </div>
+                                  <footer class="main-footer" style="margin-left:0 !important;">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 2.3.8
+    </div>
+    <strong style="margin-left: 20px;">Copyright &copy; 2017 <a href="#">Company</a>.</strong> All rights
+    reserved.
+  </footer>
+<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <!-- jQuery UI 1.11.4 -->
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+        <script>
+            $.widget.bridge('uibutton', $.ui.button);
+</script>
+        <!-- Bootstrap 3.3.6 -->
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <!-- Morris.js charts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+        <!-- Sparkline -->
+        <script src="plugins/sparkline/jquery.sparkline.min.js"></script>
+        <!-- jvectormap -->
+        <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+        <script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+        <!-- jQuery Knob Chart -->
+        <script src="plugins/knob/jquery.knob.js"></script>
+        <!-- daterangepicker -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+        <script src="plugins/daterangepicker/daterangepicker.js"></script>
+        <!-- datepicker -->
+        <script src="plugins/datepicker/bootstrap-datepicker.js"></script>
+        <!-- Bootstrap WYSIHTML5 -->
+        <script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+        <!-- Slimscroll -->
+        <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="plugins/fastclick/fastclick.js"></script>
+        <!-- AdminLTE App -->
+        <script src="dist/js/app.min.js"></script>
+        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+
+        <!-- AdminLTE for demo purposes -->
+        <script src="dist/js/demo.js"></script>
+        <!-- DataTables -->
+        <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+        <script>
+            $(function () {
+                $("#example1").DataTable();
+                $('#example2').DataTable({
+                    "paging": true,
+                    "lengthChange": false,
+                    "searching": false,
+                    "ordering": true,
+                    "info": true,
+                    "autoWidth": false
+                });
+            });
+</script>
+    </form>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section></div>
+</div>
+</form>
+</body>
+</html>
