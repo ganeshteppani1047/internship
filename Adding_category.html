@@ -1,0 +1,538 @@
+  <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Adding_Category</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.css">
+
+
+ <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+ <!--===============================================================================================-->
+ <link rel="stylesheet" type="text/css" href="css/util.css">
+ <link rel="stylesheet" type="text/css" href="css/main.css">
+ <link rel="stylesheet" type="text/css" href="dist/css/container.css">
+ <link rel="stylesheet" type="text/css" href="dist/css/duplicate2.css">
+ 
+ <!--===============================================================================================-->
+</head>
+<body class="hold-transition bg-c">
+  <form method="post" action="./Adding_category.html" id="form1">
+     <div class="wrapper">
+      <header class="main-header">
+    <!-- Logo -->
+    <a href="#" class="logo logo-c">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>C</b>
+      </span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg white"><b>Company</b>Name
+      </span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Messages: style can be found in dropdown.less-->
+          <li class="">
+            <a href="login.aspx" class="white">Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+      <!-- Content Wrapper. Contains page content -->
+      <div>
+       <!-- Content Header (Page header) -->
+       <section class="content-header">
+        <h1>
+          You are viewing on
+          <small> Mobile Preview</small>
+        </h1>
+       </section>
+       <section class="content">
+          <div class="row top">
+            <div class="container">
+                            <div class="row bs-wizard" style="border-bottom:0;">
+                                <div class="col-xs-3 bs-wizard-step complete" >
+                                <div class="text-center bs-wizard-stepnum"><br></div>
+                  <div class="progress"  ><div class="progress-bar" ></div></div>
+                  <a href="#" class="bs-wizard-dot"  ></a>
+                  <div class="text-center bs-wizard-stepnum"> Step 1</div>
+                 
+                </div>
+                
+                <div class="col-xs-3 bs-wizard-step complete"><!-- complete -->
+                  <div class="text-center bs-wizard-stepnum"><br></div>
+                  <div class="progress" style = "background : #f6f6f6"><div class="progress-bar" style="width: 50%"  ></div></div>
+                  <a href="#" class="bs-wizard-dot" ></a>
+                  <div class="text-center bs-wizard-stepnum"><span style="background-color: #1b62cef5; padding: 4px; border-radius: 5px; color: white;">Step 2</span></div>
+                  
+                </div>
+                
+                <div class="col-xs-3 bs-wizard-step"><!-- complete -->
+                  <div class="text-center bs-wizard-stepnum"><br></div>
+                  <div class="progress" ><div class="progress-bar" ></div></div>
+                  <a href="#" class="bs-wizard-dot"  ></a>
+                  <div class="text-center bs-wizard-stepnum">Step 3</div>
+                  
+                </div>
+                
+                <div class="col-xs-3 bs-wizard-step disabled" ><!-- active -->
+                  <div class="text-center bs-wizard-stepnum"><br></div>
+                  <div class="progress" ><div class="progress-bar" ></div></div>
+                  <a href="#" class="bs-wizard-dot" ></a>
+                  
+                  <div class="text-center bs-wizard-stepnum">Step 4</div>
+                  
+                </div>
+            </div>
+        </div>
+            <!-- left column -->
+            <div class="row">
+              <div class="col-md-2">
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-8">
+                <div class="box box-new">
+                  <!--<form role="form">-->
+                  <div class="box-body" id="Category">
+                   
+                      <div style="display: block;">
+                      <div class="col-xs-12 col-sm-12 col-md-4">
+                        <h3><center>Create Main Category</center></h3><hr>
+                        Category Name
+                        <input name="txtCategory" type="text" id="txtCategory" class="form-control" onchange="MainCategoryAvailability()" onkeypress="return blockSpecialChars(event)"><br />
+                        <input type="submit" name="btnCreate" value="Create" onclick="return Category();" id="btnCreate" class="btn btn-info pull-right" />
+                        <br />
+                        <div class="first">
+                          <div class="container-table100">
+                            <div class="wrap-table100">
+                              <div class="table100 ver3 m-b-110">
+                                <div class="table100-head">
+                                  <table>
+                                    <thead>
+                                      <tr class="row100 head">
+                                        <th class="cell100 cols1"><center>Sl.No.</center></th>
+                                        <th class="cell100 cols2"><center>Main Subject</center></th>
+                                      </tr>
+                                    </thead>
+                                  </table>
+                                </div>
+
+                                <div class="table100-body js-pscroll">
+                                  <table>
+                                    <tbody>
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">1</td>
+                                        <td class="cell100 cols2">Boxing</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">2</td>
+                                        <td class="cell100 cols2">Yoga</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">3</td>
+                                        <td class="cell100 cols2">Gym</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">4</td>
+                                        <td class="cell100 cols2">Yoga</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">5</td>
+                                        <td class="cell100 cols2">Yoga</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">6</td>
+                                        <td class="cell100 cols2">Dance</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">68</td>
+                                        <td class="cell100 cols2">Gym</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">59</td>
+                                        <td class="cell100 cols2">Gym</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">211</td>
+                                        <td class="cell100 cols2">Yoga</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">568</td>
+                                        <td class="cell100 cols2">Yoga</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">12</td>
+                                        <td class="cell100 cols2">Gym</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">43</td>
+                                        <td class="cell100 cols2">Boxing</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">32</td>
+                                        <td class="cell100 cols2">Yoga</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">32</td>
+                                        <td class="cell100 cols2">Gym</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">23</td>
+                                        <td class="cell100 cols2">Yoga</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">12</td>
+                                        <td class="cell100 cols2">Yoga</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">321</td>
+                                        <td class="cell100 cols2">Dance</td>
+                                      </tr>
+
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="col-xs-12 col-sm-12 col-md-4">
+                        <h3><center>Create Sub Category 1</center></h3><hr>
+                         Category Name<input name="txtCategory1" type="text" id="txtCategory1" class="form-control" onchange="SubCategory1Availability()" onkeypress="return blockSpecialChars(event)" />
+                         <span id="lblSubCategory1"></span><br />
+                          <input type="submit" name="btnCreate1" value="Create" onclick="return SubCategory();" id="btnCreate1" class="btn btn-info pull-right" />
+                          <div class="second">
+                          <div class="container-table100">
+                            <div class="wrap-table100">
+                              <div class="table100 ver3 m-b-110">
+                                <div class="table100-head">
+                                  <table>
+                                    <thead>
+                                      <tr class="row100 head">
+                                        <th class="cell100 cols1"><center>Sl.No.</center></th>
+                                        <th class="cell100 cols2"><center>Main Subject</center></th>
+                                      </tr>
+                                    </thead>
+                                  </table>
+                                </div>
+
+                                <div class="table100-body js-pscroll">
+                                  <table>
+                                    <tbody>
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">1</td>
+                                        <td class="cell100 cols2">Boxing</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">2</td>
+                                        <td class="cell100 cols2">Yoga</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">3</td>
+                                        <td class="cell100 cols2">Gym</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">4</td>
+                                        <td class="cell100 cols2">Yoga</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">5</td>
+                                        <td class="cell100 cols2">Yoga</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">6</td>
+                                        <td class="cell100 cols2">Dance</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">68</td>
+                                        <td class="cell100 cols2">Gym</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">59</td>
+                                        <td class="cell100 cols2">Gym</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">211</td>
+                                        <td class="cell100 cols2">Yoga</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">568</td>
+                                        <td class="cell100 cols2">Yoga</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">12</td>
+                                        <td class="cell100 cols2">Gym</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">43</td>
+                                        <td class="cell100 cols2">Boxing</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">32</td>
+                                        <td class="cell100 cols2">Yoga</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">32</td>
+                                        <td class="cell100 cols2">Gym</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">23</td>
+                                        <td class="cell100 cols2">Yoga</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">12</td>
+                                        <td class="cell100 cols2">Yoga</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">321</td>
+                                        <td class="cell100 cols2">Dance</td>
+                                      </tr>
+
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>           
+                    
+                      <div class="col-xs-12 col-sm-12 col-md-4 ">
+                        <h3><center>Create Sub Category 1</center></h3><hr>
+                        Category Name
+                        <input name="txtCategory1" type="text" id="txtCategory1" class="form-control" onchange="SubCategory1Availability()" onkeypress="return blockSpecialChars(event)" />
+                        <span id="lblSubCategory1"></span><br />
+                        <input type="submit" name="btnCreate1" value="Create" onclick="return SubCategory();" id="btnCreate1" class="btn btn-info pull-right" />
+                          <div class="second">
+                            <div class="container-table100">
+                            <div class="wrap-table100">
+                              <div class="table100 ver3 m-b-110">
+                                <div class="table100-head">
+                                  <table>
+                                    <thead>
+                                      <tr class="row100 head">
+                                        <th class="cell100 cols1"><center>Sl.No.</center></th>
+                                        <th class="cell100 cols2"><center>Main Subject</center></th>
+                                      </tr>
+                                    </thead>
+                                  </table>
+                                </div>
+
+                                <div class="table100-body js-pscroll">
+                                  <table>
+                                    <tbody>
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">1</td>
+                                        <td class="cell100 cols2">Boxing</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">2</td>
+                                        <td class="cell100 cols2">Yoga</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">3</td>
+                                        <td class="cell100 cols2">Gym</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">4</td>
+                                        <td class="cell100 cols2">Yoga</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">5</td>
+                                        <td class="cell100 cols2">Yoga</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">6</td>
+                                        <td class="cell100 cols2">Dance</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">68</td>
+                                        <td class="cell100 cols2">Gym</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">59</td>
+                                        <td class="cell100 cols2">Gym</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">211</td>
+                                        <td class="cell100 cols2">Yoga</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">568</td>
+                                        <td class="cell100 cols2">Yoga</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">12</td>
+                                        <td class="cell100 cols2">Gym</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">43</td>
+                                        <td class="cell100 cols2">Boxing</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">32</td>
+                                        <td class="cell100 cols2">Yoga</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">32</td>
+                                        <td class="cell100 cols2">Gym</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">23</td>
+                                        <td class="cell100 cols2">Yoga</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">12</td>
+                                        <td class="cell100 cols2">Yoga</td>
+                                      </tr>
+
+                                      <tr class="row100 body">
+                                        <td class="cell100 cols1">321</td>
+                                        <td class="cell100 cols2">Dance</td>
+                                      </tr>
+
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                                 
+                        
+                    </div>
+                  </div>
+                </div>
+             
+     <div class="button_align">
+        <div class="box box-new next_modal">
+            <!--<form role="form">--> 
+            <div class="box-body">
+            <input type="submit" name="btnNext" value="Back" id="btnNext" class="btn btn-primary pull-left" />
+            <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal">Next</button>
+            <!-- Modal -->
+              <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-body next_modal">
+                      <p>Please enter the required details?</p>
+                      <input type="submit" name="btnNext" value="Yes" id="btnNext" class="btn btn-primary pull-left" />
+                      <input type="submit" name="btnNext" value="Skip" id="btnNext" class="btn btn-primary pull-right" />
+                    </div>
+                  </div>
+
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+       </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+  </section>
+      <!-- /.content-wrapper -->
+      <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+        </div>
+        <strong>Copyright &copy; 2017 <a href="#">Company</a>.</strong>
+        All rights reserved. 
+      </footer>
+
+            <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+        <!-- ./wrapper -->
+
+<!--===============================================================================================-->  
+  <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+  <script src="vendor/bootstrap/js/popper.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+  <script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+  <script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+  <script>
+    $('.js-pscroll').each(function(){
+      var ps = new PerfectScrollbar(this);
+
+      $(window).on('resize', function(){
+        ps.update();
+      })
+    });
+      
+    
+  </script>
+<script type="text/javascript">
+//<![CDATA[
+alert('Record Added Successfully')//]]>
+</script>
+</form>
+</body>
+</html>
+
